@@ -1,4 +1,3 @@
-
 # review-host
 
 Host multiple [reviews](https://github.com/juliangruber/review) in one app server.
@@ -19,9 +18,24 @@ Then create a directory for your host to live in.
 $ mkdir review && cd review
 ```
 
-Now create the reviews you wish to host. Check [example/](https://github.com/juliangruber/review-host/tree/master/example) for examples.
+Now create the reviews you wish to host. Check [example/](https://github.com/juliangruber/review-host/tree/master/example) for
+a complete examples.
 
-Each site (e.g. `sites/bootstrap/index.js`) needs to export an express request handler that came from `review()`.
+Each site (e.g. `sites/bootstrap/index.js`) needs to export a function that returns an express request handler that came
+from `review()`.
+
+Example:
+
+```js
+module.exports = function (cacheDir) {
+  return review()
+    .sites({ google : 'http://google.com' })
+    .cache({
+      dir : cacheDir,
+      expires : 60
+    })
+}
+```
 
 ```bash
 $ mkdir -p sites/bootstrap
