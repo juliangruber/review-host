@@ -23,6 +23,10 @@ function host(opts) {
    */
   
   var sites = fs.readdirSync(opts.sites)
+    .filter(function (site) {
+      return site[0] != '.'
+    })
+  
   sites.forEach(function (site) {
     var handler = require(opts.sites + '/' + site)(opts.cache)
     app.use('/' + site + '/', handler)
