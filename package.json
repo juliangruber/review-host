@@ -1,0 +1,17 @@
+{
+  "name": "review-host",
+  "version": "0.0.1",
+  "main": "host.js",
+  "author": "Julian Gruber <julian@juliangruber.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node host.js"
+  },
+  "dependencies": {
+    "review": "~0.5.2",
+    "express": "~3.0.6",
+    "jade": "~0.28.1",
+    "optimist": "~0.3.5"
+  },
+  "repository": "https://github.com/juliangruber/review-host"
+}

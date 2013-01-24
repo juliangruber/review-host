@@ -1,0 +1,11 @@
+!!!
+html
+  head
+    title Review
+    link(rel="stylesheet",href="/style.css")
+  body
+    h1 Review
+    ul
+      each site in sites
+        li
+          a(href="/#{site}/")= site
