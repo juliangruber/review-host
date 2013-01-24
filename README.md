@@ -21,13 +21,15 @@ $ mkdir review && cd review
 
 Now create the reviews you wish to host. Check [example/](https://github.com/juliangruber/review-host/tree/master/example) for examples.
 
+Each site (e.g. `sites/bootstrap/index.js`) needs to export an express request handler that came from `review()`.
+
 ```bash
 $ mkdir -p sites/bootstrap
 $ vim sites/bootstrap/index.js
 $ # ...
 ```
 
-Finally start the server from your `review`-directory
+Finally start the server from your `review`-directory. It will now start serving all reviews in `sites/`.
 
 ```bash
 $ review-host
