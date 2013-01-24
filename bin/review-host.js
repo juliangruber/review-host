@@ -7,11 +7,11 @@ var argv = optimist
   .usage   ('Usage: $0 [OPTIONS]')
   
   .describe('sites', 'The folder the sites are in')
-  .default ('sites', './sites')
+  .default ('sites', process.cwd() + '/sites')
   .alias   ('sites', 's')
   
   .describe('cache', 'The folder to be used for cache files')
-  .default ('cache', './cache')
+  .default ('cache', process.cwd() + '/cache')
   .alias   ('cache', 'c')
   
   .describe('port', 'The port to listen to')
