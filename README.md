@@ -65,6 +65,8 @@ Returns an `express` request handler. `opts` can be:
 
 ## Installation
 
+There is no need to have phantomjs installed, it will be fetched automatically together with `review`.
+
 ```bash
 $ npm install -g review-host # for cli
 $ npm install review-host    # for library
